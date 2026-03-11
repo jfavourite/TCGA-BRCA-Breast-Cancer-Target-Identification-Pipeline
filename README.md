@@ -149,7 +149,7 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase2_Venn_Diagram_Overlap.png`
+###  `Phase2_Venn_Diagram_Overlap.png`
 > *Two-circle Venn diagram showing overlap between Project 1 (4,103 genes) and Project 2 (1,328 genes). The intersection of 666 genes is highlighted. This represents your high-confidence tumor-upregulated gene set carried forward for all downstream analyses.*
 
 ---
@@ -187,16 +187,16 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase3_GO_BP_Dotplot.png`
+###  `Phase3_GO_BP_Dotplot.png`
 > *Dotplot of top 20 enriched GO Biological Process terms. Dot size = gene count, color = adjusted p-value. Expected to show strong enrichment for mitotic/cell cycle terms confirming oncogenic transcriptional program.*
 
-### 📊 INSERT IMAGE: `Phase3_KEGG_Barplot.png`
+###  `Phase3_KEGG_Barplot.png`
 > *Barplot of top KEGG pathways ranked by gene count. Cell cycle, Fanconi anemia, and homologous recombination pathways expected at top — consistent with chromosomal instability phenotype.*
 
-### 📊 INSERT IMAGE: `Phase3_Reactome_Dotplot.png`
+### `Phase3_Reactome_Dotplot.png`
 > *Dotplot of top Reactome pathways. Complements KEGG results with finer resolution — Cell Cycle Checkpoints, M Phase, and DNA Replication dominate.*
 
-### 📊 INSERT IMAGE: `Phase3_GO_BP_Emapplot.png`
+###  `Phase3_GO_BP_Emapplot.png`
 > *Enrichment map showing relationships between GO-BP terms as a network. Clustered nodes represent related biological processes — expect to see a large cell cycle/mitosis cluster and a separate DNA repair cluster.*
 
 ---
@@ -235,13 +235,13 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase4_TCGA_log2FC_Distribution.png`
+###  `Phase4_TCGA_log2FC_Distribution.png`
 > *Histogram of TCGA log2FC values for all 540 found genes. Should show a right-skewed distribution with the majority of genes having log2FC > 1, confirming broad upregulation in the full cohort.*
 
-### 📊 INSERT IMAGE: `Phase4_Tumor_vs_Normal_Scatter.png`
+###  `Phase4_Tumor_vs_Normal_Scatter.png`
 > *Scatter plot of mean tumor expression vs mean normal expression for all genes. Points above the diagonal represent upregulated genes. Validated genes (log2FC > 1) highlighted — expected to show clear separation from normal tissue.*
 
-### 📊 INSERT IMAGE: `Phase4_Top30_Validated_Genes.png`
+### `Phase4_Top30_Validated_Genes.png`
 > *Bar chart of top 30 genes by TCGA log2FC. Genes like COL10A1, IBSP, MMP1 expected at top. Confirms the most dramatically overexpressed genes in 1,093 TCGA tumor samples.*
 
 ---
@@ -285,13 +285,13 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase5_Subtype_Distribution.png`
+###  `Phase5_Subtype_Distribution.png`
 > *Bar chart showing number of validated genes with highest expression per PAM50 subtype. Basal-like bar expected to be tallest (221 genes), followed by HER2-enriched (113). Color-coded by subtype using standard PAM50 colors (red=Basal, orange=HER2, green=LumA, blue=LumB, purple=Normal-like).*
 
-### 📊 INSERT IMAGE: `Phase5_Top20_Subtype_Boxplots.png`
+###  `Phase5_Top20_Subtype_Boxplots.png`
 > *Faceted boxplot grid (4×5) showing expression of top 20 validated genes across all 5 PAM50 subtypes. Each panel = one gene, x-axis = subtype, y-axis = normalized expression. Three patterns visible: (1) Basal-like enriched genes (STAT1, S100A11), (2) HER2-enriched dominant (ERBB2 — positive control), (3) Pan-subtype stromal genes (COL1A1, FN1, POSTN).*
 
-### 📊 INSERT IMAGE: `Phase5_Subtype_Heatmap.png` or `heatmap_top40_subtypes.png`
+###  `Phase5_Subtype_Heatmap.png` or `heatmap_top40_subtypes.png`
 > *Hierarchical clustering heatmap of top 40–50 validated genes × 5 subtypes. Z-score scaled rows. Column clustering groups HER2-enriched with Luminal A, and Basal-like with Luminal B — reflecting known transcriptional relationships. Five gene clusters visible: (1) Normal-like enriched (SPP1, CRABP2), (2) HER2-dominant (ERBB2, CEACAM6), (3) Stromal/ECM pan-subtype (COL genes, FN1), (4) Basal-like specific (PARP1, KPNA2, STMN1, STAT1), (5) HER2+LumB shared (SDC1).*
 
 ---
@@ -337,16 +337,16 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase6_KM_PLK1.png`
+### `Phase6_KM_PLK1.png`
 > *Kaplan-Meier survival curve for PLK1 — High (red) vs Low (blue) expression groups. X-axis = days, Y-axis = survival probability. Tick marks = censored patients. Include log-rank p-value. Note: p may be non-significant due to low event numbers — report this as a cohort limitation.*
 
-### 📊 INSERT IMAGE: `Phase6_KM_TOP2A.png`
+### `Phase6_KM_TOP2A.png`
 > *KM curve for TOP2A expression vs overall survival. Same format as PLK1 curve.*
 
-### 📊 INSERT IMAGE: `Phase6_KM_CDK1.png`
+###  `Phase6_KM_CDK1.png`
 > *KM curve for CDK1 expression vs overall survival.*
 
-### 📊 INSERT IMAGE: `Phase6_Forest_Plot.png`
+### `Phase6_Forest_Plot.png`
 > *Forest plot of the 4 Cox-significant genes (MAL2, MMP13, SHCBP1, ULBP2). Each gene shown as a point estimate (HR) with 95% confidence interval. Dashed vertical line at HR=1. All points to the right of 1 indicating risk genes. Note the compressed x-axis scale (1.000–1.006) reflecting modest effect sizes in this low-event cohort.*
 
 ---
@@ -390,10 +390,10 @@ BiocManager::install(c(
 
 ---
 
-### 📊 INSERT IMAGE: `Phase7_Top30_CCLE_Expression.png`
+### `Phase7_Top30_CCLE_Expression.png`
 > *Horizontal bar chart of top 30 validated genes by mean TPM in breast cancer cell lines. Color gradient from light orange (low) to dark red (high). Shows which of the 502 validated genes are most robustly expressed in experimental cell line models.*
 
-### 📊 INSERT IMAGE: `Phase7_Candidate_Genes_Boxplot.png`
+###  `Phase7_Candidate_Genes_Boxplot.png`
 > *Horizontal boxplot showing TPM distribution across breast cancer cell lines for 10 candidate genes. Each box represents variation across cell lines — wide boxes (ERBB2) indicate heterogeneous expression reflecting HER2-amplified vs non-amplified lines. Genes ordered by median expression. MMP13 and SPP1 visibly lowest — justifying their deprioritization.*
 
 ---
@@ -444,10 +444,10 @@ MMP1, MMP13, MMP14, COL1A1, COL1A2, COL3A1, COL5A1, COL5A2, FN1, POSTN, VCAN, BG
 
 ---
 
-### 📊 INSERT IMAGE: `Phase8_Target_Prioritization_Scores.png`
+### `Phase8_Target_Prioritization_Scores.png`
 > *Horizontal bar chart of top 20 scored genes. Bars color-coded by top PAM50 subtype (red=Basal-like, orange=HER2-enriched, blue=Luminal B). Score labels shown at end of each bar. PLK1, TOP2A, CDK1 visible in upper portion of chart.*
 
-### 📊 INSERT IMAGE: `Phase8_Score_Breakdown_Heatmap.png`
+### `Phase8_Score_Breakdown_Heatmap.png`
 > *Heatmap showing score breakdown for top 20 genes across 5 criteria columns (Fold Change, TCGA Validation, Subtype Specificity, Survival, Cell Line). Numbers displayed in each cell. Color from white (0) to dark red (max). Allows visual comparison of which evidence dimension drives each gene's total score.*
 
 ---
