@@ -1,7 +1,6 @@
 # TCGA-BRCA Breast Cancer Target Identification Pipeline
 ### A Multi-Phase Bioinformatics Workflow for Drug Target Discovery
-
-> **PhD Research Project**  
+  
 > Integrating multi-source transcriptomic data to identify, validate, and prioritize druggable targets in breast cancer through differential expression, functional enrichment, TCGA validation, subtype analysis, survival analysis, and cell line confirmation.
 
 ---
