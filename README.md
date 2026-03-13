@@ -4,26 +4,6 @@
 > Integrating multi-source transcriptomic data to identify, validate, and prioritize druggable targets in breast cancer through differential expression, functional enrichment, TCGA validation, subtype analysis, survival analysis, and cell line confirmation.
 
 ---
-
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Pipeline Summary](#pipeline-summary)
-3. [Data Sources](#data-sources)
-4. [Requirements](#requirements)
-5. [Phase 1 — Data Integrity & Cleaning](#phase-1--data-integrity--cleaning)
-6. [Phase 2 — Overlap Analysis](#phase-2--overlap-analysis)
-7. [Phase 3 — Functional Enrichment](#phase-3--functional-enrichment)
-8. [Phase 4 — TCGA Validation](#phase-4--tcga-validation)
-9. [Phase 5 — Subtype Analysis](#phase-5--subtype-analysis)
-10. [Phase 6 — Survival Analysis](#phase-6--survival-analysis)
-11. [Phase 7 — Cell Line Expression (CCLE)](#phase-7--cell-line-expression-ccle)
-12. [Phase 8 — Target Prioritization Scoring](#phase-8--target-prioritization-scoring)
-13. [Phase 9 — Druggability & Protein Structure](#phase-9--druggability--protein-structure)
-14. [Final Selected Targets](#final-selected-targets)
-15. [Output Files](#output-files)
-16. [Key Results Summary](#key-results-summary)
-
-
 ## Project Overview
 
 This pipeline integrates differential expression results from two independent breast cancer transcriptomic studies to identify a high-confidence set of tumor-upregulated genes. These genes are subsequently validated in the full TCGA-BRCA cohort, characterized by PAM50 molecular subtype, assessed for survival significance, confirmed in breast cancer cell lines, and scored for druggability — culminating in the selection of three priority drug targets for molecular docking.
@@ -266,21 +246,6 @@ BiocManager::install(c(
 | SHCBP1 | ~1.001 | < 0.05 | Spindle checkpoint, mitotic driver |
 | ULBP2 | ~1.004 | < 0.05 | NK cell ligand, immune evasion |
 
----
-
-### `Phase6_KM_PLK1.png`
-> *Kaplan-Meier survival curve for PLK1 — High (red) vs Low (blue) expression groups. X-axis = days, Y-axis = survival probability. Tick marks = censored patients. Include log-rank p-value. Note: p may be non-significant due to low event numbers — report this as a cohort limitation.*
-
-### `Phase6_KM_TOP2A.png`
-> *KM curve for TOP2A expression vs overall survival. Same format as PLK1 curve.*
-
-###  `Phase6_KM_CDK1.png`
-> *KM curve for CDK1 expression vs overall survival.*
-
-### `Phase6_Forest_Plot.png`
-> *Forest plot of the 4 Cox-significant genes (MAL2, MMP13, SHCBP1, ULBP2). Each gene shown as a point estimate (HR) with 95% confidence interval. Dashed vertical line at HR=1. All points to the right of 1 indicating risk genes. Note the compressed x-axis scale (1.000–1.006) reflecting modest effect sizes in this low-event cohort.*
-
-
 ## Phase 7 — Cell Line Expression (CCLE)
 
 **Objective:** Confirm that candidate genes are expressed in breast cancer cell lines (not just patient tumor tissue), establishing experimental tractability for in vitro validation and drug testing.
@@ -318,20 +283,6 @@ BiocManager::install(c(
 <img width="1500" height="1200" alt="Phase8_Target_Prioritization_Scores" src="https://github.com/user-attachments/assets/d8c3ff3e-b432-4090-be29-e73ca9e090a7" />
 
 > *Horizontal bar chart of top 20 scored genes. Bars color-coded by top PAM50 subtype (red=Basal-like, orange=HER2-enriched, blue=Luminal B). Score labels shown at end of each bar. PLK1, TOP2A, CDK1 visible in upper portion of chart.*
-
-## Key Results Summary
-
-| Phase | Key Finding |
-|-------|-------------|
-| Phase 1–2 | 666 genes consistently upregulated across two independent breast cancer datasets |
-| Phase 3 | Cell cycle dysregulation and chromosomal instability are dominant biological themes |
-| Phase 4 | 93% validation rate in full TCGA-BRCA cohort (502/540 genes confirmed) |
-| Phase 5 | 502-gene signature enriched in Basal-like (44%) and HER2-enriched (22%) subtypes |
-| Phase 6 | 4 genes survive Cox multiple testing correction; low event rate limits power |
-| Phase 7 | MMP13 and SPP1 deprioritized — near-zero cell line expression indicates stromal origin |
-| Phase 8 | Druggability-adjusted scoring surfaces enzymatic tumor-intrinsic targets |
-
----
 
 ## Citation & Acknowledgements
 
