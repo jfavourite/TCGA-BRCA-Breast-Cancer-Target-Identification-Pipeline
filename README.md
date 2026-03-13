@@ -63,21 +63,6 @@ Project 2 DEGs (1,328 genes)  ──┘         │
 ### R Version
 R 4.5.2, Bioconductor 3.22
 
-### Required Packages
-```r
-# CRAN
-install.packages(c("dplyr", "tidyr", "ggplot2", "ggpubr", "pheatmap", 
-                   "gridExtra", "tibble"))
-
-# Bioconductor
-BiocManager::install(c(
-  "TCGAbiolinks", "DESeq2", "curatedTCGAData", "MultiAssayExperiment",
-  "TCGAutils", "clusterProfiler", "enrichplot", "ReactomePA",
-  "org.Hs.eg.db", "AnnotationDbi", "ggVennDiagram",
-  "survival", "survminer", "depmap", "ExperimentHub"
-))
-```
-
 ### Important Notes
 - Use `dplyr::select()` explicitly — masked by `AnnotationDbi`
 - Use `stats::median()` explicitly — masked in depmap environment
